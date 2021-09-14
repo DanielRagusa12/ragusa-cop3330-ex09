@@ -1,12 +1,11 @@
 package org.example;
 
 /*
- *  UCF COP3330 Fall 2021 Assignment 1 Solution
+ *  UCF COP3330 Fall 2021 Assignment 9 Solution
  *  Copyright 2021 Daniel Ragusa
  */
 
 import java.util.Scanner;
-import java.util.Calendar;
 
 public class App
 {
@@ -15,25 +14,20 @@ public class App
     {
         int length;
         int width;
+        Scanner input=new Scanner(System.in);
 
         System.out.print("Length? ");
-
-        Scanner input=new Scanner(System.in);
         length=input.nextInt();
 
         System.out.print("Width? ");
-
-        Scanner input2=new Scanner(System.in);
-        width=input2.nextInt();
+        width=input.nextInt();
 
         int area=length*width;
 
-        int roundedGallons = (int)Math.ceil(area/gallon);
+        double roundedGallons = (int)Math.ceil(area/gallon);
 
 
-        System.out.print("You will need to purchase " +(roundedGallons)+ " gallons of paint to cover " +(area)+ " square feet.");
-
-
+        System.out.print("You will need to purchase " +(int)(roundedGallons)+ " gallons of paint to cover " +(area)+ " square feet.");
 
     }
 }
